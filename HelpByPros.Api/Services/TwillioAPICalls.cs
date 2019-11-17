@@ -9,13 +9,6 @@ namespace HelpByPros.Api.Model
 {
     public class TwillioAPICalls: ISentMessage
     {
-<<<<<<< HEAD
-        /// revert this too
-        /// new stuff trying to revert thi
-        /// sfsa
-=======
-
->>>>>>> parent of 18fa281... revert me
         /// <summary>
         /// Our project Twillio is a trail so function is very limited 
         /// and only verified phone number can recieve calls
@@ -23,7 +16,7 @@ namespace HelpByPros.Api.Model
         /// <param name="x"></param>
         /// <param name="phoneList"></param>
         /// 
-        public TwillioAPICalls(IConfiguration configuration)
+        public TwillioAPICalls(IConfiguration configuration)    
         {
             Configuration = configuration;
         }

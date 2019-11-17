@@ -35,7 +35,7 @@ namespace PH
                 builder =>
                 {
                     // In future, put actual deployed website here
-                    builder.WithOrigins("http://localhost:4200", "http://localhost:3000")
+                    builder.WithOrigins("http://localhost:4200", "https://localhost:4200")
                     .AllowCredentials()
                     .AllowAnyHeader()
                     .AllowAnyMethod();

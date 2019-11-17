@@ -1,0 +1,93 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+  branches:
+    include:
+    - master
+    exclude:
+    - feature/*
+    - tonyfeaturework/*
+    - charlie/*
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'Proj2'
+    organization: '1909-sep30-net'
+    scannerMode: 'MSBuild'
+    projectKey: 'Project2tcj'
+    projectName: 'Project2tcj'
+    extraProperties: |
+      'sonar.exclusions=**/lib/**'
+       sonar.exclusions=**/HelpByPros.DataAccess/Entities/**
+       sonar.exclusions=**/HelpByPros.DataAccess/Migrations/**
+
+# three different ways to solve the initial problem
+
+# - script:
+#     cd RestaurantReviews
+#     dotnet build --configuration $(buildConfiguration)
+#   displayName: 'dotnet build $(buildConfiguration)'
+
+# - script: dotnet build RestaurantReviews --configuration $(buildConfiguration)
+#   displayName: 'dotnet build $(buildConfiguration)'
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+  workingDirectory: ./
+
+
+# - script: dotnet test
+#   displayName: dotnet test
+#   workingDirectory: RestaurantReviews
+
+# a task can encapsulate some useful logic so we don't have to
+# write it all out in script step...
+# in this case, this task is both running tests and publishing the results
+# to the build itself
+
+- task: DotNetCoreCLI@2
+  displayName: dotnet test
+  inputs:
+    command: test
+    projects: |   
+     HelpByPros.Test/HelpByPros.Test.csproj
+     HelpByPros.BusinessLogic/HelpAByPros.BusinessLogic.csproj
+     HelpByPros.sln    # Pass a solution instead of a csproj.
+
+    arguments: --configuration $(buildConfiguration) --collect "Code Coverage"
+  continueOnError: true
+
+
+- task: SonarCloudAnalyze@1
+  displayName: Run SonarCloud analysis
+
+- task: SonarCloudPublish@1
+  displayName: Publish SonarCloud quality gate result
+
+- task: DotNetCoreCLI@2
+  displayName: dotnet publish + zip
+  inputs:
+    command: 'publish'
+    arguments: --configuration $(buildConfiguration)
+    publishWebProjects: true
+    zipAfterPublish: true
+
+- task: AzureRmWebAppDeployment@4
+  displayName: App Service deploy
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go(f28d4954-abb0-42d0-bf3d-f3ac501fe8a3)'
+    appType: 'webApp'
+    WebAppName: 'HelpByPros'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'

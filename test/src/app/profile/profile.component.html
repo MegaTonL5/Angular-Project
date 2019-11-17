@@ -1,0 +1,4 @@
+<pre *ngIf="auth.userProfile$ | async as profile">
+        {{ profile.email }}
+    <!--<code>{{ profile | json }}</code>-->
+</pre>

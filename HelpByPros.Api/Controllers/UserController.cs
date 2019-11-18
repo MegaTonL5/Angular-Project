@@ -52,7 +52,7 @@ namespace HelpByPros.Api.Controllers
                 model.Phone = prof.Phone;
                 model.Summary = prof.Summary;
                 model.YearsOfExp = prof.YearsOfExp;
-                model.Username = prof.Username;
+                model.Username = prof.Email;
                 model.Credential = prof.Credential;
                 model.Category = prof.Category;
                 model.Email = prof.Email;
@@ -65,7 +65,7 @@ namespace HelpByPros.Api.Controllers
                     model.FirstName = member.FirstName;
                     model.LastName = member.LastName;
                     model.Phone = member.Phone;
-                    model.Username = member.Username;
+                    model.Username = member.Email;
                     model.Email = member.Email;
             
     

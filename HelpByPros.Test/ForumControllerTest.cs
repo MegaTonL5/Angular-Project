@@ -61,7 +61,7 @@ namespace HelpByPros.Test
                 {
                     FirstName = "hi",
                     LastName="bye",
-                    Username="Testme",
+                    Email="Testme",
                     Email="hfsao@gamil.com",
                     Id=3,
                     Phone="678908765789",
@@ -96,7 +96,7 @@ namespace HelpByPros.Test
                 {
                     FirstName = "hi",
                     LastName = "bye",
-                    Username = "Testme",
+                    Email = "Testme",
                     Email = "hfsao@gamil.com",
                     Id = 3,
                     Phone = "678908765789",
@@ -129,7 +129,7 @@ namespace HelpByPros.Test
                 {
                     FirstName = "hi",
                     LastName = "bye",
-                    Username = "Testme",
+                    Email = "Testme",
                     Email = "hfsao@gamil.com",
                     Id = 3,
                     Phone = "678908765789",
@@ -162,7 +162,7 @@ namespace HelpByPros.Test
                 {
                     FirstName = "hi",
                     LastName = "bye",
-                    Username = "Testme",
+                    Email = "Testme",
                     Email = "hfsao@gamil.com",
                     Id = 3,
                     Phone = "678908765789",

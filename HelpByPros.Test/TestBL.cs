@@ -29,7 +29,7 @@ namespace HelpByPros.Test
                 LastName = lname,
                 Phone = phone,
                 Email = email,
-                Username = login,
+                Email = login,
                 Password = password,
             };
 
@@ -38,7 +38,7 @@ namespace HelpByPros.Test
             Assert.Equal(lname, user.LastName);
             Assert.Equal(phone, user.Phone);
             Assert.Equal(email, user.Email);
-            Assert.Equal(login, user.Username);
+            Assert.Equal(login, user.Email);
             Assert.Equal(password, user.Password);
 
         }
@@ -57,14 +57,14 @@ namespace HelpByPros.Test
 
             //instead of this
             //Act
-            IUser user = new User() { FirstName = value1, LastName = value2, Email = value3, Username = value4, Password = value5 };
+            IUser user = new User() { FirstName = value1, LastName = value2, Email = value3, Email = value4, Password = value5 };
 
 
             //Assert
             Assert.Equal(value1, user.FirstName);
             Assert.Equal(value2, user.LastName);
             Assert.Equal(value3, user.Email);
-            Assert.Equal(value4, user.Username);
+            Assert.Equal(value4, user.Email);
             Assert.Equal(value5, user.Password);
 
         }
@@ -91,7 +91,7 @@ namespace HelpByPros.Test
         {
             //assemble
 
-            User labRat = new User() { FirstName = "Sammy", LastName = "Davis", Email = "Junior", Username = "sammeh", Password = "121234" };
+            User labRat = new User() { FirstName = "Sammy", LastName = "Davis", Email = "Junior", Email = "sammeh", Password = "121234" };
 
             for (int i = 0; i < 7; i++)
             {
@@ -110,7 +110,7 @@ namespace HelpByPros.Test
                         break;
 
                     case 4:
-                        Assert.IsType<string>(labRat.Username);
+                        Assert.IsType<string>(labRat.Email);
                         break;
 
                     case 5:

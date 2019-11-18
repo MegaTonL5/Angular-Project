@@ -31,7 +31,7 @@ namespace HelpByPros.Test
                 FirstName = "Rando",
                 LastName = "Random",
                 Email = "rando@random.ran",
-                Username = "randorandom",
+                Email = "randorandom",
                 Password = "ranran",
                 Phone = "1231231234",
                 //PointAvailable = 100
@@ -64,7 +64,7 @@ namespace HelpByPros.Test
                 FirstName = "Rando",
                 LastName = "Random",
                 Email = "rando@random.ran",
-                Username = "randorandom",
+                Email = "randorandom",
                 Password = "ranran",
                 Phone = "1231231234",
                 //PointAvailable = 100
@@ -104,7 +104,7 @@ namespace HelpByPros.Test
                 Email = "random@ran.dom",
                 FirstName = "Rando",
                 LastName = "Random",
-                Username = "randorandom",
+                Email = "randorandom",
                 Password = "ranran",
                 Phone = "1231231234",
                 //Profile_Pic = p.User.Profile_Pic,
@@ -135,7 +135,7 @@ namespace HelpByPros.Test
                 Email = "random@ran.dom",
                 FirstName = "Rando",
                 LastName = "Random",
-                Username = "randorandom",
+                Email = "randorandom",
                 Password = "ranran",
                 Phone = "1231231234",
                 //Profile_Pic = p.User.Profile_Pic,
@@ -148,7 +148,7 @@ namespace HelpByPros.Test
                 Email = "random@ran.dom",
                 FirstName = "Randwo",
                 LastName = "Randowm",
-                Username = "randorandom",
+                Email = "randorandom",
                 Password = "rawnran",
                 Phone = "w",
                 //Profile_Pic = p.User.Profile_Pic,
@@ -246,7 +246,7 @@ namespace HelpByPros.Test
             using var arrangeContext = new PH_DbContext(options);
 
             var id = 5;
-            var user = new Users { Username = "Porks" };
+            var user = new Users { Email = "Porks" };
 
             arrangeContext.Professionals.Add(new Professionals { Id = id, User = user });
             arrangeContext.SaveChanges();
@@ -471,7 +471,7 @@ namespace HelpByPros.Test
             var id = 5;
             var username = "Abc";
 
-            arrangeContext.Users.Add(new Users { Id = id, Username = username });
+            arrangeContext.Users.Add(new Users { Id = id, Email = username });
             arrangeContext.SaveChanges();
 
             using var actContext = new PH_DbContext(options);

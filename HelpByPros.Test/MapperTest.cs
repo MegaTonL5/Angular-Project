@@ -26,7 +26,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Username = username,
+                Email = username,
                 Password = password
             };
 
@@ -46,7 +46,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Username = username,
+                Email = username,
                 Password = password
             };
 
@@ -66,7 +66,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Username = username,
+                Email = username,
                 Password = password
             };
 
@@ -111,7 +111,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Username = username,
+                Email = username,
                 Password = password
             };
 
@@ -140,7 +140,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Username = username,
+                Email = username,
                 Password = password,
                 Category = "English"
             };

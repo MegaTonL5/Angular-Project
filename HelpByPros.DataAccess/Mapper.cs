@@ -15,7 +15,6 @@ namespace HelpByPros.DataAccess
                 Email = u.Email,
                 FirstName = u.FirstName,
                 LastName = u.LastName,
-                Username = u.Username,
                 Password = u.Password,
                 Phone = u.Phone,
                 Profile_Pic = u.Profile_Pic,
@@ -32,7 +31,6 @@ namespace HelpByPros.DataAccess
                 Email = u.Email,
                 FirstName = u.FirstName,
                 LastName = u.LastName,
-                Username = u.Username,
                 Password = u.Password,
                 Phone = u.Phone,
                 Profile_Pic = u.Profile_Pic,
@@ -54,7 +52,7 @@ namespace HelpByPros.DataAccess
             x.Email = m.User.Email;
             x.FirstName = m.User.FirstName;
             x.LastName = m.User.LastName;
-            x.Username = m.User.Username;
+            x.Email = m.User.Email;
             x.Password = m.User.Password;
             x.Phone = m.User.Phone;
             x.Profile_Pic = m.User.Profile_Pic;
@@ -113,7 +111,6 @@ namespace HelpByPros.DataAccess
                 Email = p.User.Email,
                 FirstName = p.User.FirstName,
                 LastName = p.User.LastName,
-                Username = p.User.Username,
                 Password = p.User.Password,
                 Phone = p.User.Phone,
                 Profile_Pic = p.User.Profile_Pic,
@@ -174,7 +171,6 @@ namespace HelpByPros.DataAccess
                 Email = a.User.Email,
                 FirstName = a.User.FirstName,
                 LastName = a.User.LastName,
-                Username = a.User.Username,
                 Password = a.User.Password,
                 Phone = a.User.Phone,
                 Profile_Pic = a.User.Profile_Pic,                
@@ -219,7 +215,7 @@ namespace HelpByPros.DataAccess
             //therefore it cannot be mapped to the BL-version.
             x.Author = MapUser(a.Users);
             
-            x.AuthorName = x.Author.Username;
+            x.AuthorName = x.Author.Email;
 
             x.Answered = a.Answered;              //check if answered
 

@@ -18,7 +18,7 @@ namespace HelpByPros.Test
             prof.Summary = "i am not good";
             prof.Credential = "link";
             prof.Category = "Math";
-            prof.Username = "username";
+            prof.Email = "username";
             prof.YearsOfExp = 30;
             prof.Phone = "919234922";
             prof.LastName = "lastname";
@@ -32,14 +32,14 @@ namespace HelpByPros.Test
             model.Phone = prof.Phone;
             model.Summary = prof.Summary;
             model.YearsOfExp = prof.YearsOfExp;
-            model.Username = prof.Username;
+            model.Username = prof.Email;
             model.Credential = prof.Credential;
             model.Category = prof.Category;
             model.Email = prof.Email;
 
             Assert.Equal(prof.Email, model.RegisterProfessional().Email);
             Assert.Equal(prof.FirstName, model.RegisterProfessional().FirstName);
-            Assert.Equal(prof.Username, model.RegisterProfessional().Username);
+            Assert.Equal(prof.Email, model.RegisterProfessional().Email);
             Assert.Equal(prof.Credential, model.RegisterProfessional().Credential);
             Assert.Equal(prof.Phone, model.RegisterProfessional().Phone);
 
@@ -56,7 +56,7 @@ namespace HelpByPros.Test
             var member = new Member();
             member.FirstName = "nan";
             member.Email = "sca@gmail.com";
-            member.Username = "username";
+            member.Email = "username";
             member.Phone = "919234922";
             member.LastName = "lastname";
 
@@ -67,12 +67,12 @@ namespace HelpByPros.Test
             model.FirstName = member.FirstName;
             model.LastName = member.LastName;
             model.Phone = member.Phone;
-            model.Username = member.Username;
+            model.Username = member.Email;
             model.Email = member.Email;
 
             Assert.Equal(member.Email, model.RegisterMember().Email);
             Assert.Equal(member.FirstName, model.RegisterMember().FirstName);
-            Assert.Equal(member.Username, model.RegisterMember().Username);
+            Assert.Equal(member.Email, model.RegisterMember().Email);
             Assert.Equal(member.Phone, model.RegisterMember().Phone);
             Assert.False(model.IsProfessional = false);
 

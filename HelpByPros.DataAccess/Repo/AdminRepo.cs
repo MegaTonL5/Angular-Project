@@ -55,7 +55,7 @@ namespace HelpByPros.DataAccess.Repo
         {
             try
             {
-                var x = await _context.Admin.Include(x => x.UsersID == UserID || x.User.Username == UserName).FirstAsync();
+                var x = await _context.Admin.Include(x => x.UsersID == UserID || x.User.Email == UserName).FirstAsync();
                 return Mapper.MapAdmin(x);
 
             }

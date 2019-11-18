@@ -39,19 +39,14 @@ namespace HelpByPros.DataAccess.Entities
                 entity.Property(p => p.Password)
                     .IsRequired() // NOT NULL
                     .HasMaxLength(64); // NVARCHAR(64)
-                entity.Property(p => p.Username)
-                    .IsRequired() // NOT NULL
-                    .HasMaxLength(64); // NVARCHAR(64)
                 entity.Property(p => p.Phone)
                     .HasMaxLength(64); // NVARCHAR(64)                 
                 entity.Property(p => p.Email)
                    .HasMaxLength(100) // NVARCHAR(64)   
                    .IsRequired();
-                entity.HasIndex(p => p.Username)
+                entity.HasIndex(p => p.Email)
                     .IsUnique();// UNIQUE
                 entity.HasIndex(p => p.Phone)
-                    .IsUnique();// UNIQUE
-                entity.HasIndex(p => p.Email)
                     .IsUnique();// UNIQUE
                 entity.HasIndex(p => p.Id)
                     .IsUnique();// UNIQUE

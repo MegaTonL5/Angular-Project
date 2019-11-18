@@ -73,7 +73,7 @@ namespace HelpByPros.DataAccess.Repo
             if (ques.AuthorName != null)
             {
 
-                var q = await _dbContext.Users.Where(x => x.Username == ques.AuthorName).FirstOrDefaultAsync();
+                var q = await _dbContext.Users.Where(x => x.Email == ques.AuthorName).FirstOrDefaultAsync();
                 if (q == null)
                     throw new InvalidOperationException("There is no user logged in.");
             }

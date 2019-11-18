@@ -61,15 +61,15 @@ namespace HelpByPros.DataAccess.Repo
         /// <summary>
         /// getting a member if it exist if not then exeception will be thrown instead
         /// </summary>
-        /// <param name="UserName"> optional attribute </param>
+        /// <param name="Email"> optional attribute </param>
         /// <param name="UserID">optional attribute </param>
         /// <returns></returns>
-        public async Task<Member> GetAMemberAsync(string UserName)
+        public async Task<Member> GetAMemberAsync(string Email)
         {
             try
             {
                 var y = _context.Members.Include(x => x.User).Include(j => j.AccInfo);
-                var z = await y.Where(x => x.User.Username == UserName).FirstAsync();
+                var z = await y.Where(x => x.User.Email == Email).FirstAsync();
                 return Mapper.MapMember(z);
             }
             catch (ArgumentNullException)
@@ -86,15 +86,15 @@ namespace HelpByPros.DataAccess.Repo
         /// <summary>
         /// getting a Professonal if it exist if not then exeception will be thrown instead
         /// </summary>
-        /// <param name="UserName"> optional attribute </param>
+        /// <param name="Email"> optional attribute </param>
         /// <param name="UserID">optional attribute </param>
         /// <returns></returns>
-        public async Task<Professional> GetAProfessionalAsync(string UserName)
+        public async Task<Professional> GetAProfessionalAsync(string Email)
         {
             try
             {
                 var y = _context.Professionals.Include(x => x.User).Include(j => j.AccInfo);
-                var z = await y.Where(x => x.User.Username == UserName).FirstAsync();
+                var z = await y.Where(x => x.User.Email == Email).FirstAsync();
                 return Mapper.MapProfessonal(z);
             }
             catch (ArgumentNullException ex)
@@ -153,7 +153,7 @@ namespace HelpByPros.DataAccess.Repo
             }
 
         }
-        public async Task<IEnumerable<Answer>> GetUsersAnswerAsync(string UserName)
+        public async Task<IEnumerable<Answer>> GetUsersAnswerAsync(string Email)
         {
             var a = await _context.Answers.Include(x => x.User).ToListAsync();
             List<Answer> xList = new List<Answer>();
@@ -166,7 +166,7 @@ namespace HelpByPros.DataAccess.Repo
             return xList;
         }
 
-        public async Task<IEnumerable<Question>> GetUsersQuestionAsync(string UserName)
+        public async Task<IEnumerable<Question>> GetUsersQuestionAsync(string Email)
         {
             var q = await _context.Questions.Include(x => x.Users).ToListAsync();
             List<Question> xList = new List<Question>();
@@ -225,12 +225,12 @@ namespace HelpByPros.DataAccess.Repo
 
 
         }
-        public async Task<User> GetAUserAsync(string userName)
+        public async Task<User> GetAUserAsync(string Email)
         {
             try
             {
                 var y = _context.Users;
-                var z = await y.Where(x => x.Username == userName).FirstOrDefaultAsync();
+                var z = await y.Where(x => x.Email == Email).FirstOrDefaultAsync();
                 return Mapper.MapUser(z);
             }
             catch (ArgumentNullException ex)
@@ -260,7 +260,7 @@ namespace HelpByPros.DataAccess.Repo
 
         public async Task ModifyUserInfoAsync(User User)
         {
-            var oldUserInfo = await _context.Users.Where(x => x.Username == User.Username).FirstAsync();
+            var oldUserInfo = await _context.Users.Where(x => x.Email == User.Email).FirstAsync();
 
             var newUser = Mapper.MapUser(User);
             newUser.Id = oldUserInfo.Id;
@@ -284,7 +284,7 @@ namespace HelpByPros.DataAccess.Repo
             try
             {
 
-                var oldUserInfo = await _context.Professionals.Where(x => x.User.Username == user.Username).FirstAsync();
+                var oldUserInfo = await _context.Professionals.Where(x => x.User.Email == user.Email).FirstAsync();
 
             var newUser = Mapper.MapProfessonal(user, oldUserInfo);
            
@@ -309,7 +309,7 @@ namespace HelpByPros.DataAccess.Repo
             try
             {
 
-                var oldUserInfo = await _context.Members.Where(x => x.User.Username == user.Username).FirstAsync();
+                var oldUserInfo = await _context.Members.Where(x => x.User.Email == user.Email).FirstAsync();
 
             var newUser = Mapper.MapMember(user, oldUserInfo);
               _context.Entry(oldUserInfo).CurrentValues.SetValues(newUser);
@@ -324,7 +324,7 @@ namespace HelpByPros.DataAccess.Repo
             }
         }
 
-        public Task AddPoints(string username, int Points)
+        public Task AddPoints(string Email, int Points)
         {
             throw new NotImplementedException();
         }
@@ -377,7 +377,7 @@ namespace HelpByPros.DataAccess.Repo
         {
             var x = await _context.Members.Include(x => x.User).ToListAsync();
 
-            var z = x.Where(x => x.User.Username == username);
+            var z = x.Where(x => x.User.Email == username);
             var y = z.Select(x => x.User.Phone).FirstOrDefault();
 
             return y;

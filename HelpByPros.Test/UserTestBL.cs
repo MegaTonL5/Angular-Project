@@ -56,7 +56,7 @@ namespace HelpByPros.Test
                 FirstName = fname,
                 LastName = lname,
                 Email = email,
-                Username = login,
+                Email = login,
                 Password = password
             };
 
@@ -64,7 +64,7 @@ namespace HelpByPros.Test
             Assert.Equal(fname, user.FirstName);
             Assert.Equal(lname, user.LastName);
             Assert.Equal(email, user.Email);
-            Assert.Equal(login, user.Username);
+            Assert.Equal(login, user.Email);
             Assert.Equal(password, user.Password);
 
         }
@@ -83,14 +83,14 @@ namespace HelpByPros.Test
 
             //instead of this
             //Act
-            IUser user = new User() { FirstName = value1, LastName = value2, Email = value3, Username = value4, Password = value5 };
+            IUser user = new User() { FirstName = value1, LastName = value2, Email = value3, Email = value4, Password = value5 };
 
 
             //Assert
             Assert.Equal(value1, user.FirstName);
             Assert.Equal(value2, user.LastName);
             Assert.Equal(value3, user.Email);
-            Assert.Equal(value4, user.Username);
+            Assert.Equal(value4, user.Email);
             Assert.Equal(value5, user.Password);
 
         }

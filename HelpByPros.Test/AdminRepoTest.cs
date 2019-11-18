@@ -26,7 +26,7 @@ namespace HelpByPros.Test
 
             var id = 5;
             var UserId = 10;
-            var newUser = new Users { Username = "dude" };
+            var newUser = new Users { Email = "dude" };
 
             arrangeContext.Admin.Add(new Admins { Id = id, UsersID = UserId, User = newUser });
             arrangeContext.SaveChanges();
@@ -53,7 +53,7 @@ namespace HelpByPros.Test
 
             var id = 5;
             var UserId = 10;
-            var newUser = new Users { Username = "dude" };
+            var newUser = new Users { Email = "dude" };
 
             arrangeContext.Admin.Add(new Admins { Id = id, UsersID = UserId, User = newUser });
             arrangeContext.SaveChanges();

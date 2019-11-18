@@ -34,7 +34,7 @@ namespace HelpByPros.Api.Model
                 Email = Email,
                 FirstName = FirstName,
                 LastName = LastName,
-                Username = Username,
+                Email = Username,
                 Password = Password,
                 Phone = Phone
             };
@@ -48,7 +48,7 @@ namespace HelpByPros.Api.Model
                 Email = Email,
                 FirstName = FirstName,
                 LastName = LastName,
-                Username = Username,
+                Email = Username,
                 Password = Password,
                 PointAvailable = 0,
                 Phone = Phone
@@ -62,7 +62,7 @@ namespace HelpByPros.Api.Model
                 Email = Email,
                 FirstName = FirstName,
                 LastName = LastName,
-                Username = Username,
+                Email = Username,
                 Password = Password,
                 PointAvailable = 0,
                 Phone = Phone,

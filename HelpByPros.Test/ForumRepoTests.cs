@@ -27,8 +27,6 @@ namespace HelpByPros.Test
                 FirstName = "Rando",
                 LastName = "Random",
                 Email = "rando@random.ran",
-                Email = "randorandom",
-                Password = "ranran",
                 Phone = "1231231234",
                 //PointAvailable = 100
             };
@@ -89,8 +87,6 @@ namespace HelpByPros.Test
                 FirstName = "Rando",
                 LastName = "Random",
                 Email = "rando@random.ran",
-                Email = "randorandom",
-                Password = "ranran",
                 Phone = "1231231234",
                 //PointAvailable = 100
             };

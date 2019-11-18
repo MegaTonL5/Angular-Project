@@ -35,10 +35,7 @@ namespace HelpByPros.DataAccess.Entities
                 entity.Property(p => p.LastName)
                     .IsRequired() // NOT NULL
                     .HasMaxLength(64); // NVARCHAR(64)
-                entity.Property(p => p.Profile_Pic);
-                entity.Property(p => p.Password)
-                    .IsRequired() // NOT NULL
-                    .HasMaxLength(64); // NVARCHAR(64)
+                entity.Property(p => p.Profile_Pic);    
                 entity.Property(p => p.Phone)
                     .HasMaxLength(64); // NVARCHAR(64)                 
                 entity.Property(p => p.Email)
@@ -179,11 +176,7 @@ namespace HelpByPros.DataAccess.Entities
 
             });
 
-
-
-
         }
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

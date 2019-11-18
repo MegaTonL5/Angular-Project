@@ -17,8 +17,7 @@ namespace HelpByPros.Test
             string lname = "Smith";
             string phone = "1231231234";
             string email = "john.smith@gmail.com";
-            string login = "johnny";
-            string password = "password";
+         
 
 
 
@@ -29,8 +28,7 @@ namespace HelpByPros.Test
                 LastName = lname,
                 Phone = phone,
                 Email = email,
-                Email = login,
-                Password = password,
+
             };
 
             //Assert
@@ -38,8 +36,7 @@ namespace HelpByPros.Test
             Assert.Equal(lname, user.LastName);
             Assert.Equal(phone, user.Phone);
             Assert.Equal(email, user.Email);
-            Assert.Equal(login, user.Email);
-            Assert.Equal(password, user.Password);
+
 
         }
 
@@ -57,15 +54,13 @@ namespace HelpByPros.Test
 
             //instead of this
             //Act
-            IUser user = new User() { FirstName = value1, LastName = value2, Email = value3, Email = value4, Password = value5 };
+            IUser user = new User() { FirstName = value1, LastName = value2, Email = value3};
 
 
             //Assert
             Assert.Equal(value1, user.FirstName);
             Assert.Equal(value2, user.LastName);
             Assert.Equal(value3, user.Email);
-            Assert.Equal(value4, user.Email);
-            Assert.Equal(value5, user.Password);
 
         }
 
@@ -91,7 +86,7 @@ namespace HelpByPros.Test
         {
             //assemble
 
-            User labRat = new User() { FirstName = "Sammy", LastName = "Davis", Email = "Junior", Email = "sammeh", Password = "121234" };
+            User labRat = new User() { FirstName = "Sammy", LastName = "Davis", Email = "Junior"};
 
             for (int i = 0; i < 7; i++)
             {
@@ -113,9 +108,7 @@ namespace HelpByPros.Test
                         Assert.IsType<string>(labRat.Email);
                         break;
 
-                    case 5:
-                        Assert.IsType<string>(labRat.Password);
-                        break;
+  
 
                     default:
                         break;

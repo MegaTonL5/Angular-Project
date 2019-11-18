@@ -15,7 +15,6 @@ namespace HelpByPros.DataAccess
                 Email = u.Email,
                 FirstName = u.FirstName,
                 LastName = u.LastName,
-                Password = u.Password,
                 Phone = u.Phone,
                 Profile_Pic = u.Profile_Pic,
                 Id = u.Id
@@ -31,7 +30,6 @@ namespace HelpByPros.DataAccess
                 Email = u.Email,
                 FirstName = u.FirstName,
                 LastName = u.LastName,
-                Password = u.Password,
                 Phone = u.Phone,
                 Profile_Pic = u.Profile_Pic,
                 Id = u.Id
@@ -53,7 +51,6 @@ namespace HelpByPros.DataAccess
             x.FirstName = m.User.FirstName;
             x.LastName = m.User.LastName;
             x.Email = m.User.Email;
-            x.Password = m.User.Password;
             x.Phone = m.User.Phone;
             x.Profile_Pic = m.User.Profile_Pic;
             x.PointAvailable = m.AccInfo.PointAvailable;
@@ -111,7 +108,6 @@ namespace HelpByPros.DataAccess
                 Email = p.User.Email,
                 FirstName = p.User.FirstName,
                 LastName = p.User.LastName,
-                Password = p.User.Password,
                 Phone = p.User.Phone,
                 Profile_Pic = p.User.Profile_Pic,
                 PointAvailable = p.AccInfo.PointAvailable,
@@ -171,7 +167,6 @@ namespace HelpByPros.DataAccess
                 Email = a.User.Email,
                 FirstName = a.User.FirstName,
                 LastName = a.User.LastName,
-                Password = a.User.Password,
                 Phone = a.User.Phone,
                 Profile_Pic = a.User.Profile_Pic,                
 

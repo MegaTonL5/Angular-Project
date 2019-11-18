@@ -31,8 +31,6 @@ namespace HelpByPros.Test
                 FirstName = "Rando",
                 LastName = "Random",
                 Email = "rando@random.ran",
-                Email = "randorandom",
-                Password = "ranran",
                 Phone = "1231231234",
                 //PointAvailable = 100
             };
@@ -64,8 +62,7 @@ namespace HelpByPros.Test
                 FirstName = "Rando",
                 LastName = "Random",
                 Email = "rando@random.ran",
-                Email = "randorandom",
-                Password = "ranran",
+
                 Phone = "1231231234",
                 //PointAvailable = 100
             };
@@ -104,8 +101,7 @@ namespace HelpByPros.Test
                 Email = "random@ran.dom",
                 FirstName = "Rando",
                 LastName = "Random",
-                Email = "randorandom",
-                Password = "ranran",
+
                 Phone = "1231231234",
                 //Profile_Pic = p.User.Profile_Pic,
                 //PointAvailable = p.AccInfo.PointAvailable,
@@ -135,8 +131,7 @@ namespace HelpByPros.Test
                 Email = "random@ran.dom",
                 FirstName = "Rando",
                 LastName = "Random",
-                Email = "randorandom",
-                Password = "ranran",
+ 
                 Phone = "1231231234",
                 //Profile_Pic = p.User.Profile_Pic,
                 //PointAvailable = p.AccInfo.PointAvailable,
@@ -148,8 +143,7 @@ namespace HelpByPros.Test
                 Email = "random@ran.dom",
                 FirstName = "Randwo",
                 LastName = "Randowm",
-                Email = "randorandom",
-                Password = "rawnran",
+ 
                 Phone = "w",
                 //Profile_Pic = p.User.Profile_Pic,
                 //PointAvailable = p.AccInfo.PointAvailable,

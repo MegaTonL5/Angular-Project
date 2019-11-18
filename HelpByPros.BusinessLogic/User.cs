@@ -44,14 +44,6 @@ namespace HelpByPros.BusinessLogic
         public string Email { get; set; }
 
         /// <summary>
-        /// password 
-        /// </summary>
-        [Required(ErrorMessage = "Password is required")]
-        [StringLength(12, MinimumLength = 4, ErrorMessage = "Must be Between 4 and 12 Characters.")]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
-
-        /// <summary>
         /// adding pictures in the future
         /// </summary>
         

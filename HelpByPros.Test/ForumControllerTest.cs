@@ -61,11 +61,9 @@ namespace HelpByPros.Test
                 {
                     FirstName = "hi",
                     LastName="bye",
-                    Email="Testme",
                     Email="hfsao@gamil.com",
                     Id=3,
                     Phone="678908765789",
-                    Password="jkjkjk"
 
                     
 
@@ -96,11 +94,9 @@ namespace HelpByPros.Test
                 {
                     FirstName = "hi",
                     LastName = "bye",
-                    Email = "Testme",
                     Email = "hfsao@gamil.com",
                     Id = 3,
                     Phone = "678908765789",
-                    Password = "jkjkjk"
 
 
 
@@ -129,13 +125,9 @@ namespace HelpByPros.Test
                 {
                     FirstName = "hi",
                     LastName = "bye",
-                    Email = "Testme",
                     Email = "hfsao@gamil.com",
                     Id = 3,
                     Phone = "678908765789",
-                    Password = "jkjkjk"
-
-
 
                 }));
 
@@ -163,10 +155,8 @@ namespace HelpByPros.Test
                     FirstName = "hi",
                     LastName = "bye",
                     Email = "Testme",
-                    Email = "hfsao@gamil.com",
                     Id = 3,
                     Phone = "678908765789",
-                    Password = "jkjkjk"
                 }));
 
             Mock<IForumRepo> _forumrepo = new Mock<IForumRepo>();

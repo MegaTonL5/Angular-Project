@@ -82,7 +82,6 @@ namespace HelpByPros.Test
             FirstName = "FirstName",
             LastName = "LastName",
             Phone = "Phone",
-            Email = "Username",
             Email= "you@yahoo.com"
 
 
@@ -106,7 +105,6 @@ namespace HelpByPros.Test
                 FirstName = "FirstName",
                 LastName = "LastName",
                 Phone = "Phone",
-                Email = "Username",
                 Email = "you@yahoo.com",
                 Summary = "prof.Summary",
                 YearsOfExp = 4,

@@ -10,8 +10,7 @@ namespace HelpByPros.Test
         string firstName = "rando";
         string lastName = "random";
         string phone = "1231231234";
-        string email = "rando@ran.dom";
-        string username = "randorandom";
+        string email = "randorandom";
         string password = "ranran";
         int pointsAvailable = 100;
 
@@ -26,8 +25,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Email = username,
-                Password = password
+                Email = email,
             };
 
             User testUser = Mapper.MapUser(newUsers);
@@ -46,8 +44,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Email = username,
-                Password = password
+                Email = email,
             };
 
             Users testUser = Mapper.MapUser(newUser);
@@ -66,8 +63,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Email = username,
-                Password = password
+                Email = email,
             };
 
             AccountInfo acctInfo = new AccountInfo();
@@ -111,8 +107,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Email = username,
-                Password = password
+                Email = email,
             };
 
             AccountInfo acctInfo = new AccountInfo();
@@ -140,8 +135,7 @@ namespace HelpByPros.Test
                 FirstName = firstName,
                 LastName = lastName,
                 Phone = phone,
-                Email = username,
-                Password = password,
+                Email = email,
                 Category = "English"
             };
 
